@@ -25,17 +25,23 @@ tabela = pd.read_excel("C:/.../vendas.xlsx")  # Lê o arquivo Excel com os dados
 
 Aqui, o código carrega os dados da planilha vendas.xlsx usando o pandas. É importante que o caminho esteja correto e o arquivo contenha colunas como Região, Produto e Valor Venda.
 
+---
+
 ```python
 st.title("Dashboard de Vendas")  # Define o título principal do dashboard
 ```
 
 Este comando exibe o título no topo da página do Streamlit.
 
+---
+
 ```python
 regioes = st.multiselect("Selecione as regiões", tabela["Região"].unique())
 ```
 
 Cria um campo de seleção múltipla onde o usuário pode escolher uma ou mais regiões.
+
+---
 
 ```python
 tabela["Região"].unique() # pega todas as regiões disponíveis na base de dados.
@@ -48,11 +54,15 @@ if regioes:
 
 Se o usuário selecionar alguma região, o código filtra a tabela para mostrar apenas os dados dessas regiões.
 
+---
+
 ```python
 st.metric("Faturamento Total", f"R${tabela['Valor Venda'].sum()}")
 ```
 
 Exibe o faturamento total das vendas filtradas.
+
+---
 
 ```python
 tabela['Valor Venda'].sum() # calcula a soma de todas as vendas.
@@ -64,6 +74,8 @@ st.metric("Ticket Médio", f"R${tabela['Valor Venda'].mean()}")
 
 Mostra o ticket médio, ou seja, a média do valor das vendas.
 
+---
+
 ```python
 mean() # calcula a média dos valores.
 ```
@@ -74,6 +86,7 @@ st.bar_chart(tabela.groupby("Região")["Valor Venda"].sum())
 
 Gera um gráfico de barras com o faturamento total por região.
 
+---
 
 ```python
 groupby("Região") #agrupa os dados por região
