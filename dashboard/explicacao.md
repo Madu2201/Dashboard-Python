@@ -114,10 +114,10 @@ st.bar_chart(tabela.groupby("Produto")["Valor Venda"].sum())
 
 ```bash
 pip install streamlit pandas openpyxl
-Execute o dashboard:
 ```
 
 ```bash
-streamlit run dashboard.py
+C:\Users\dudac\AppData\Roaming\Python\Python313\Scripts\streamlit.exe run dashboard/main_dashboard.py
+
 O navegador abrirá automaticamente com o dashboard interativo.
 ```

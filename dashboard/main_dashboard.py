@@ -1,8 +1,7 @@
 import streamlit as st # Ferramenta de criaçãa de Dashboards e sistemas em Python
 import pandas as pd # Que vai gerenciar a base de dados
 
-tabela = pd.read_excel("C:/Users/dudac/OneDrive/Área de Trabalho/Madu/Programação/Visual Studio Code/Dashboard-Python/dashboard/vendas.xlsx")
- # Lendo arquivo em excel
+tabela = pd.read_excel("C:/Users/dudac/OneDrive/Área de Trabalho/Madu/Programação/Visual Studio Code/Dashboard-Python/dashboard/vendas.xlsx") # Lendo arquivo em excel
 
 #print(tabela)
 
