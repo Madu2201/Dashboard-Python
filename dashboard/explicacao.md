@@ -23,7 +23,9 @@ import pandas as pd     # Biblioteca para manipulação e análise de dados
 tabela = pd.read_excel("C:/.../vendas.xlsx")  # Lê o arquivo Excel com os dados de vendas
 ```
 
-Aqui, o código carrega os dados da planilha vendas.xlsx usando o pandas. É importante que o caminho esteja correto e o arquivo contenha colunas como Região, Produto e Valor Venda.
+Aqui, o código carrega os dados da planilha vendas.xlsx usando o pandas. 
+
+É importante que o caminho esteja correto e o arquivo contenha colunas como Região, Produto e Valor Venda.
 
 ---
 
