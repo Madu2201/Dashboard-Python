@@ -37,7 +37,9 @@ regioes = st.multiselect("Selecione as regiões", tabela["Região"].unique())
 
 Cria um campo de seleção múltipla onde o usuário pode escolher uma ou mais regiões.
 
-*tabela["Região"].unique() pega todas as regiões disponíveis na base de dados.*
+```python
+tabela["Região"].unique() # pega todas as regiões disponíveis na base de dados.
+```
 
 ```python
 if regioes:
@@ -52,7 +54,9 @@ st.metric("Faturamento Total", f"R${tabela['Valor Venda'].sum()}")
 
 Exibe o faturamento total das vendas filtradas.
 
-*tabela['Valor Venda'].sum() calcula a soma de todas as vendas.*
+```python
+tabela['Valor Venda'].sum() # calcula a soma de todas as vendas.
+```
 
 ```python
 st.metric("Ticket Médio", f"R${tabela['Valor Venda'].mean()}")
@@ -60,7 +64,9 @@ st.metric("Ticket Médio", f"R${tabela['Valor Venda'].mean()}")
 
 Mostra o ticket médio, ou seja, a média do valor das vendas.
 
-*mean() calcula a média dos valores.*
+```python
+mean() # calcula a média dos valores.
+```
 
 ```python
 st.bar_chart(tabela.groupby("Região")["Valor Venda"].sum())
@@ -68,9 +74,14 @@ st.bar_chart(tabela.groupby("Região")["Valor Venda"].sum())
 
 Gera um gráfico de barras com o faturamento total por região.
 
-*groupby("Região") agrupa os dados por região*
 
-*sum() soma os valores de venda por grupo*
+```python
+groupby("Região") #agrupa os dados por região
+```
+
+```python
+sum() # soma os valores de venda por grupo
+```
 
 ```python
 st.bar_chart(tabela.groupby("Produto")["Valor Venda"].sum())
