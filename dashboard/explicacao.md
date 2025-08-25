@@ -76,11 +76,11 @@ st.metric("Ticket Médio", f"R${tabela['Valor Venda'].mean()}")
 
 Mostra o ticket médio, ou seja, a média do valor das vendas.
 
----
-
 ```python
 mean() # calcula a média dos valores.
 ```
+
+---
 
 ```python
 st.bar_chart(tabela.groupby("Região")["Valor Venda"].sum())
