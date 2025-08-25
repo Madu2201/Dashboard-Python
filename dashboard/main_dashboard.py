@@ -1,12 +1,15 @@
-import streamlit as st
-import pandas as pd
+import streamlit as st # Ferramenta de criaçãa de Dashboards e sistemas em Python
+import pandas as pd # Que vai gerenciar a base de dados
 
-tabela = pd.read_excel("vendas.xlsx")
+tabela = pd.read_excel("C:/Users/dudac/OneDrive/Área de Trabalho/Madu/Programação/Visual Studio Code/Dashboard-Python/dashboard/vendas.xlsx")
+ # Lendo arquivo em excel
 
-# titulo
-st.title("Dashboard de Vendas")
+#print(tabela)
 
-# campo de seleção e filtro dos dados
+# Titulo do Dashboard
+st.title("Dashboard de Vendas") 
+
+# Campo de seleção e filtro dos dados
 regioes = st.multiselect("Selecione as regiões", tabela["Região"].unique())
 
 if regioes:
