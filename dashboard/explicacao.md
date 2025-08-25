@@ -91,7 +91,7 @@ Gera um gráfico de barras com o faturamento total por região.
 ---
 
 ```python
-groupby("Região") #agrupa os dados por região
+groupby("Região") # agrupa os dados por região
 ```
 
 ```python
